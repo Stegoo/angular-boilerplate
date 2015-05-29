@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="author" content="Skies">
+    <meta name="keywords" content="Skies">
+    <meta name="description" content="Skies">
+
+    <title>App</title>
+
+    <!-- %styles% -->
+
+    <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+<body ng-app="app">
+    <script type="text/javascript">
+        window.api_url = 'http://localhost:8000/';
+        window.path_static_files = '/';
+    </script>
+
+    <!-- <div id="header" ng-include="'app/template/header.html'"></div> -->
+    <h1>App</h1>
+    <div id="main" class="content">
+        <div class="container">
+            <div ui-view></div>
+        </div>
+    </div>
+    <!-- <div id="footer" ng-include="'app/template/footer.html'"></div> -->
+
+    <!-- %scripts% -->
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="author" content="Skies">
+    <meta name="keywords" content="Skies">
+    <meta name="description" content="Skies">
+
+    <title>App</title>
+
+    <link rel="stylesheet" href="/build/TBD-0.0.1.min.css" media="screen, projection" type="text/css">
+
+    <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+<body ng-app="app">
+    <script type="text/javascript">
+        window.api_url = 'http://localhost:8000/';
+        window.path_static_files = '/';
+    </script>
+
+    <!-- <div id="header" ng-include="'app/template/header.html'"></div> -->
+    <h1>App</h1>
+    <div id="main" class="content">
+        <div class="container">
+            <div ui-view></div>
+        </div>
+    </div>
+    <!-- <div id="footer" ng-include="'app/template/footer.html'"></div> -->
+
+    <script type="text/javascript" src="http://localhost:8000/?format=javascript"></script>
+    <script type="text/javascript" src="/build/lib.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/shared/services/alert.service.js"></script>
+    <script type="text/javascript" src="app/shared/services/api-provider.service.js"></script>
+    <script type="text/javascript" src="app/shared/services/http-interceptor.service.js"></script>
+    <script type="text/javascript" src="app/route.js"></script>
+    <script type="text/javascript" src="app/endpoint.js"></script>
+    <script type="text/javascript" src="app/lib/add-ons.js"></script>
+    <script type="text/javascript" src="app/user/user.controller.js"></script>
+    <script type="text/javascript" src="app/user/user.service.js"></script>
+    <script type="text/javascript" src="/build/TBD-0.0.1.tpl.js"></script>
+
+</body>
+</html>
