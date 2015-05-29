@@ -1,2 +1,2 @@
 # angular-boilerplate
-Angular skeleton I use to set up my project
+Angular skeleton I use to set up my projects
