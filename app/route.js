@@ -27,19 +27,16 @@
                  'footer': {
                     templateUrl: baseUrl('template/footer.html')
                 }
-            },
-            authorization: { connected: true },
+            }
         })
 
         .state('root.user', {
             url: 'user',
             abstract: true, // abstract state, there is no way you could use ui-sref="state"
-            templateUrl: baseUrl('user/user.html'),
-            authorization: { connected: true }
+            templateUrl: baseUrl('user/user.html')
         }).state('root.user.list', {
             url: '', // default view for the state 'project' (/project)
             templateUrl: baseUrl('user/list.html'),
-            authorization: { connected: true },
             resolve: {
                 /** You can query data before accessing your controller. These resolves are injected in the controller. If this request fails, you won-t acces the page **/
                 UsersResolve: ['Api', function(Api){
@@ -52,7 +49,6 @@
         }).state('root.user.detail', {
             url: '/{id:[0-9]{1,8}}',
             templateUrl: baseUrl('user/detail.html'),
-            authorization: { connected: true },
             resolve: {
                 UserResolve: ['Api', '$stateParams', function(Api, $stateParams){
                     return Api.user.get({'id': $stateParams.id});
