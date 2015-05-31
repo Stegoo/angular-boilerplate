@@ -55,21 +55,6 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		connect: {
-			dev: {
-				options: {
-					port: 1337,
-					base: '.'
-				}
-			},
-			prod: {
-				options: {
-					port: 1337,
-					base: '.',
-					keepalive: true
-				}
-			}
-		},
 		/**
 		 * compile 'source/' to 'build/'
 		 **/
@@ -123,7 +108,7 @@ module.exports = function (grunt) {
                 }
 
                 for (i=0; i<scripts.length; i++) {
-                	console.info('script: ', i, ' : ' ,scripts[i]);
+                	//console.info('script: ', i, ' : ' ,scripts[i]);
                     scripts[i] = '<script type="text/javascript" src="' + scripts[i] + '"></script>';
                 }
                 index_html = index_html
@@ -282,7 +267,6 @@ module.exports = function (grunt) {
 	//init the  environment (execute it if you checkout the repo, if you want to have the newest translation strings)
 	grunt.registerTask('init', [
 		'clean',
-		'copy:favicon',
 		'copy:fonts',
 	]);
 

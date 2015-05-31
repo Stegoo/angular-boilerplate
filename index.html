@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
 
     <meta charset="UTF-8">
@@ -10,13 +10,13 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <meta name="author" content="Skies">
-    <meta name="keywords" content="Skies">
-    <meta name="description" content="Skies">
+    <meta name="author" content="app">
+    <meta name="keywords" content="app">
+    <meta name="description" content="app">
 
     <title>App</title>
 
-    <link rel="stylesheet" href="/build/TBD-0.0.1.min.css" media="screen, projection" type="text/css">
+    <link rel="stylesheet" href="/build/app-0.0.1.min.css" media="screen, projection" type="text/css">
 
     <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -28,14 +28,14 @@
         window.path_static_files = '/';
     </script>
 
-    <!-- <div id="header" ng-include="'app/template/header.html'"></div> -->
+    <div id="header" ui-view="header"></div>
     <h1>App</h1>
     <div id="main" class="content">
         <div class="container">
             <div ui-view></div>
         </div>
     </div>
-    <!-- <div id="footer" ng-include="'app/template/footer.html'"></div> -->
+    <div id="footer" ui-view="footer"></div>
 
     <script type="text/javascript" src="http://localhost:8000/?format=javascript"></script>
     <script type="text/javascript" src="/build/lib.js"></script>
@@ -48,7 +48,7 @@
     <script type="text/javascript" src="app/lib/add-ons.js"></script>
     <script type="text/javascript" src="app/user/user.controller.js"></script>
     <script type="text/javascript" src="app/user/user.service.js"></script>
-    <script type="text/javascript" src="/build/TBD-0.0.1.tpl.js"></script>
+    <script type="text/javascript" src="/build/app-0.0.1.tpl.js"></script>
 
 </body>
 </html>

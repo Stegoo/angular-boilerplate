@@ -6,6 +6,8 @@
         //Assign the users we have fetched in the resolve of our routing to our view
         $scope.users = Users.set(UsersResolve);
 
+        Alert.add('success', 'this is a standard alert');
+
     }]);
 
     angular.module('app').controller('UserCtrl', ['$scope', 'Api', 'UserResolve', 'Alert', function ($scope, Api, UserResolve, Alert) {

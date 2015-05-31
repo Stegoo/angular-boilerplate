@@ -1,5 +1,7 @@
-<div>Layout</div>
-<ul class="nav">
-    <li><a data-ui-sref="user.list">Users</a></li>
-</ul>
-<div ui-view></div>
+<div>
+    <alert class="alert" ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{alert.msg}}</alert>
+    Every route state coming from root will be included in this layout
+    <div ui-view></div>
+</div>
+
+

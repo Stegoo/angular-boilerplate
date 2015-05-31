@@ -1,0 +1,12 @@
+.alert {
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	top: 10%;
+	right: 20%;
+	z-index: 1001;
+	opacity:0.9;
+	filter:alpha(opacity=90); /* For IE8 and earlier */
+}

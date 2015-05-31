@@ -1,7 +1,7 @@
-<div data-ng-controller="UsersCtrl">
+<div>
     Users List : <span data-ng-bind="nb_users"></span>
 
-    <div ng-repeat-start="user in users">
+    <div data-ng-repeat="user in users">
         <span data-ng-bind="user.name"></span>
     </div>
 </div>

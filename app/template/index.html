@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
 
     <meta charset="UTF-8">
@@ -10,9 +10,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <meta name="author" content="Skies">
-    <meta name="keywords" content="Skies">
-    <meta name="description" content="Skies">
+    <meta name="author" content="app">
+    <meta name="keywords" content="app">
+    <meta name="description" content="app">
 
     <title>App</title>
 
@@ -28,14 +28,14 @@
         window.path_static_files = '/';
     </script>
 
-    <!-- <div id="header" ng-include="'app/template/header.html'"></div> -->
+    <div id="header" ui-view="header"></div>
     <h1>App</h1>
     <div id="main" class="content">
         <div class="container">
             <div ui-view></div>
         </div>
     </div>
-    <!-- <div id="footer" ng-include="'app/template/footer.html'"></div> -->
+    <div id="footer" ui-view="footer"></div>
 
     <!-- %scripts% -->
 

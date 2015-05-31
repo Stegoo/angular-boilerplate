@@ -7,13 +7,13 @@
      *  How to use this service :
      *
      *  1. BY DEFAULT ALREADY PRESENT IN THE layout.phtml
-     *  _ Add this directive in your html : <alert class="alert" ng-repeat="alert in alerts" type="alert.type" close="alert.close()">{{alert.msg}}</alert>
+     *  _ Add this directive in your html : <alert class="alert" ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{alert.msg}}</alert>
      *
      *  2.In your controller, inject the 'Alert' service as a dependency :
      * .controller('ExampleCtrl', ['$scope', 'Alert', function($scope, Alert) {
      *
      *  //Add an Alert wherever it pleases you
-     *  Alert.add('success',  t('Données postées avec succès.'));
+     *  Alert.add('success',  t('Data received.'));
      *
      * }]);
      *

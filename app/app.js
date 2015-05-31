@@ -24,6 +24,7 @@
 
         /** 3rd party lib **/
         'ui.router',
+        'ui.bootstrap',
 
         /** Our modules **/
         'app.directive',

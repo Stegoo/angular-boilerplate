@@ -11,31 +11,47 @@
         $urlRouterProvider.when('', '/');
         $urlRouterProvider.otherwise('404'); //When no routes is found
 
-        $stateProvider.state('root', {
-            url: '/',
-            templateUrl: baseUrl('template/layout.html'),
-            authorization: { connected: true },
-        });
+        $stateProvider
 
-        $stateProvider.state('user', {
-            url: '/user',
+        .state('root', {
+            url: '/',
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': {
+                        templateUrl: baseUrl('template/layout.html')
+                },
+                'header': {
+                    templateUrl: baseUrl('template/header.html')
+                },
+                 'footer': {
+                    templateUrl: baseUrl('template/footer.html')
+                }
+            },
+            authorization: { connected: true },
+        })
+
+        .state('root.user', {
+            url: 'user',
             abstract: true, // abstract state, there is no way you could use ui-sref="state"
+            templateUrl: baseUrl('user/user.html'),
             authorization: { connected: true }
-        }).state('user.list', {
+        }).state('root.user.list', {
             url: '', // default view for the state 'project' (/project)
             templateUrl: baseUrl('user/list.html'),
             authorization: { connected: true },
             resolve: {
                 /** You can query data before accessing your controller. These resolves are injected in the controller. If this request fails, you won-t acces the page **/
                 UsersResolve: ['Api', function(Api){
+                    /** uncommeted this line when your api is ready **/
                     //return  Api.user.get();
                     return true;
                 }]
             },
             controller: 'UsersCtrl'
-        }).state('user.detail', {
+        }).state('root.user.detail', {
             url: '/{id:[0-9]{1,8}}',
-            templateUrl: baseUrl('user/user.html'),
+            templateUrl: baseUrl('user/detail.html'),
             authorization: { connected: true },
             resolve: {
                 UserResolve: ['Api', '$stateParams', function(Api, $stateParams){
@@ -43,9 +59,14 @@
                 }],
             },
             controller: 'UserCtrl'
-        });
+        })
 
-        $stateProvider.state('404', {
+        .state('root.about', {
+            url: 'about',
+            templateUrl: baseUrl('template/about.html')
+        })
+
+        .state('404', {
             url: '/*path',
             templateUrl: baseUrl('template/404.html')
         });

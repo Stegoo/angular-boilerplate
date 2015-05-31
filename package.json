@@ -1,8 +1,8 @@
 {
-  "name": "TBD",
+  "name": "app",
   "version": "0.0.1",
   "description": "",
-  "homepage": "http://www.tbd.com",
+  "homepage": "http://www.app.com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,11 +24,10 @@
     "grunt-file-creator": "^0.1.*",
     "grunt-shell": "^0.7.0",
     "load-grunt-tasks": "^0.6.0",
-    "q": "^1.0.1",
-    "express-http-proxy": "^0.2.2"
+    "q": "^1.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git@https://github.com/Keyzer42/amin.git"
+    "url": "git@https://github.com/Stegoo/angular-boilerplate.git"
   }
 }
